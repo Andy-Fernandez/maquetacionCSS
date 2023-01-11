@@ -1,0 +1,19 @@
+-var flaticons =["flaticon-001-facebook","flaticon-002-twitter","flaticon-011-instagram","flaticon-010-linkedin","flaticon-008-youtube"]
+mixin flaticon(icon, link)
+    a(href=link): span(class=icon)
+
+doctype html
+html
+    head
+        meta(charset='utf-8')
+        link(rel="stylesheet", href="css/fonts/flaticon.css")
+    body
+        header
+            section.icons-cotainer
+                .icons-cotainer__icons
+                    for i in flaticons
+                        +flaticon(i,"#")
+
+            nav
+                .logo: a(href="#"): img(src="./img/Logo-negro.png", alt="Logo de mi blog")
+                .profile: a(href="#") Sobre mí
